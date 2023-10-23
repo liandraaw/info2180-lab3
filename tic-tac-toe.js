@@ -45,13 +45,13 @@ function clickedbox(){
                 l.textContent= "X";
                 l.classList.add('X');
                 gameHistory[b]= "X";
-                statusText.textContent= '${currPlayer}s turn';
+                statusText.textContent= 'It is now '+ currPlayer+'s turn';
                 currPlayer="O";
             }else{
                 l.textContent= "O";
                 l.classList.add('O');
                 gameHistory[b]= "O";
-                statusText.textContent= '${currPlayer}s turn'; 
+                statusText.textContent= 'It is now '+ currPlayer+'s turn'; 
                 currPlayer="X";                               
             }
 
@@ -77,7 +77,9 @@ function hoveffect(box){
     });
 }
 
+function checkwinner(){
 
+}
 
 };
 });
