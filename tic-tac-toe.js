@@ -34,6 +34,7 @@ if (notrun != true){
 function clickedbox(){
     let currPlayer ="X";
     showboxes.forEach(function(box){
+        hoveffect(box);
         box.addEventListener('click',function(e) {
         var l= e.target;
         var b= Array.from(showboxes).indexOf(l);
@@ -54,16 +55,27 @@ function clickedbox(){
                 currPlayer="X";                               
             }
 
-            
-
+        
+        
         }
+        
         //console.log (currPlayer);
         //console.log(gameHistory);
         //console.log(statusText);
     
     notrun = true;
     });
+
 });
+
+function hoveffect(box){
+    box.addEventListener('mouseover',function(){
+        box.classList.add('hover');
+    });
+    box.addEventListener('mouseout', function(){
+        box.classList.remove('hover');
+    });
+}
 
 
 
